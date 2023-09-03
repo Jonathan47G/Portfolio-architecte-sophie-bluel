@@ -1,0 +1,180 @@
+
+.blackHeader, .blackHeader button, .conteneur-modale h2, .admin-modifier button {
+    font-family: Work Sans;
+}
+
+.blackHeader {
+    background: #000;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white;
+    gap:20px;    
+}
+
+.blackHeader button {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    margin-left: 15px;
+
+}
+
+.conteneur-modifier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.admin-modifier.intro {
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.admin-modifier {
+    display: flex;
+    margin-left: 30px;
+    gap:10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-modifier button {
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFFEF8;
+}
+
+.admin-modifier button:hover {
+    font-weight: bold;
+}
+
+.admin {
+    display: none;
+}
+
+.modale-admin {
+    left: 0;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteneur-modale::-webkit-scrollbar {
+    width: 0;
+}
+
+.conteneur-modale {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-height: 90%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 50px;
+    padding: 20px;
+    max-width: 700px;
+}
+
+.conteneur-modale h2 {
+    color:#000;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.gallery-modale {
+    display: grid;
+    grid-template-columns: repeat(5, 85px);
+     grid-gap: 10px;
+     align-items: center;
+     justify-content: center;
+}
+
+.gallery-modale img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.conteneur-bouton {
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+    border-top: 2px solid #B3B3B3;
+    padding-top: 38px;
+    width: 65%;
+    align-items: center;
+    margin-bottom: 25px;  
+}
+
+.conteneur-bouton button {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Syne;
+    border-radius: 60px;
+    border: none;
+    width: 60%;  
+}
+
+.suprimer, .ajouter-photo, .fermeture, .fa-trash-can {
+    cursor: pointer;
+}
+
+.ajouter-photo {
+    padding: 10px 50px;
+    background-color: #1D6154;
+    color: #fff;
+}
+
+.ajouter-photo:hover {
+ background-color: #0E2F28;;
+}
+
+.supprimer {
+    color: #B1663C;
+    background-color: #fff;
+    
+}
+
+i.fermeture {
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 0;
+    margin-right: -95%;
+}
+
+i.fermeture:hover {
+    font-weight:900;
+}
+
+.fa-trash-can {
+    text-align: center;
+    top:-125px;
+    right: -65px;
+    font-size: 10px;
+    padding: 8px 4px;
+    border-radius: 2px;
+    position: relative;
+    color: white;
+    background-color: #000;
+}
