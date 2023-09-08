@@ -42,14 +42,37 @@
 	</header>
 	<main>
 		<div class="modale-admin">
-			<div class="conteneur-modale">
-				<i class="fermeture fa-solid fa-xmark"></i>
+			<div class="conteneur-modale page1">
+				<div class="button-interface">
+					<i class="fermeture fa-solid fa-xmark fa-xl"></i>
+				</div>
 				<h2>Galerie photo</h2>
 				<div class="gallery-modale"></div>
-				<div class="conteneur-bouton">
-					<button type="button" class="ajouter-photo">Ajouter une photo</button>
-					<button type="button" class="supprimer">Supprimer la galerie</button>
+				<div class="trait-seperation-modale"></div>
+				<button type="button" class="ajouter-photo">Ajouter une photo</button>
+			</div>
+			<div class="conteneur-modale page2">
+				<div class="button-interface">
+				<i class="icone-back fa-solid fa-arrow-left fa-xl"></i>
+				<i class="fermeture fa-solid fa-xmark fa-xl"></i>
+			</div>
+				<h2>Ajout photo</h2>
+				<div class="modale-page2-image">
+					<i class="fa-regular fa-image fa-2xl"></i>
+					<button class="push-photo">+ Ajouter photo</button>
+					<p>jpg, png : 4mo max</p>
 				</div>
+				<div class ="formulaire-ajout">
+					<label for="title-ajout" class="label-title">Titre</label>
+					<input type="text" id="title-ajout" name = "title">
+					<label for="categorie-ajout" class="label-title">Catégorie</label>
+					<select name="categorie" id="categorie-ajout">
+					</select>
+				</div>
+				<div class="trait-seperation-modale"></div>
+				<button type="button" class="button-valider">Valider</button>
+			</div>
+			</div>
 			</div>
 		</div>
 		<section id="introduction">

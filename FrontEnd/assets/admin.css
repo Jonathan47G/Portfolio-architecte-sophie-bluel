@@ -86,14 +86,13 @@
     background-color: #fff;
     overflow-y: auto;
     scrollbar-width: none;
-    max-height: 90%;
-    width: 75%;
+    width: 620px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap : 50px;
+    gap : 35px;
     padding: 20px;
-    max-width: 700px;
 }
 
 .conteneur-modale h2 {
@@ -115,66 +114,131 @@
     object-fit: cover;
 }
 
-.conteneur-bouton {
-    display: flex;
-    flex-direction: column;
-    gap : 30px;
-    border-top: 2px solid #B3B3B3;
-    padding-top: 38px;
-    width: 65%;
-    align-items: center;
-    margin-bottom: 25px;  
-}
 
-.conteneur-bouton button {
+.ajouter-photo, .button-valider {
     font-size: 14px;
     font-weight: 700;
     font-family: Syne;
     border-radius: 60px;
     border: none;
-    width: 60%;  
+    width: 40%;  
+}
+
+.trait-seperation-modale {
+    margin-top: 3%;
+    width: 75%;
+    height: 2px;
+    background: #B3B3B3;
 }
 
 .suprimer, .ajouter-photo, .fermeture, .fa-trash-can {
     cursor: pointer;
 }
 
-.ajouter-photo {
+.ajouter-photo, .button-valider {
     padding: 10px 50px;
     background-color: #1D6154;
     color: #fff;
 }
 
 .ajouter-photo:hover {
- background-color: #0E2F28;;
-}
-
-.supprimer {
-    color: #B1663C;
-    background-color: #fff;
-    
-}
-
-i.fermeture {
-    position: relative;
-    font-weight: 700;
-    font-size: 24px;
-    margin-top: 0;
-    margin-right: -95%;
-}
-
-i.fermeture:hover {
-    font-weight:900;
+ background-color: #0E2F28;
 }
 
 .fa-trash-can {
     text-align: center;
-    top:-125px;
-    right: -65px;
     font-size: 10px;
-    padding: 8px 4px;
     border-radius: 2px;
-    position: relative;
     color: white;
     background-color: #000;
+}
+
+.button-delete-work {
+    border: none;
+    background-color: #000;
+    position: relative;
+    top:-125px;
+    right: -60px;
+}
+
+
+.modale-page2-image {
+    border-radius: 3px;
+    background: #E8F1F6;
+    width: 420px;
+    height: 170px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modale-page2-image i {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    font-size: 65px;
+    color :#B9C5CC;
+}
+
+.modale-page2-image button {
+    border-radius: 50px;
+    background: #CBD6DC;
+    color: #306685;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 25px;
+    margin-bottom: 5px;
+    border: none;
+}
+.modale-page2-image button:hover {
+    font-weight: 700;    
+}
+.modale-page2-image p {
+    font-size: 10px;
+}
+.formulaire-ajout {
+    display: flex;
+    flex-direction: column; 
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.formulaire-ajout label {
+    margin-top : 20px;
+    margin-bottom: 15px;
+}
+
+#categorie-ajout, #title-ajout {
+    background: #FFF;
+    text-align: center;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    font-family: Work Sans;
+    color: #3D3D3D;
+    width: 420px;
+    height: 50px;
+    border: none;
+}
+#categorie-ajout cursor {
+    padding-right: 20px;
+}
+
+.button-valider {
+    background: #A7A7A7;
+}
+
+.button-interface {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 550px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.conteneur-modale.page1 .button-interface .fermeture {
+    margin-right: -570px;
+
 }

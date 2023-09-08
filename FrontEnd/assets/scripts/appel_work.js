@@ -39,8 +39,6 @@ async function genererCategories() {
         const categoryId = category.id;
         const worksToHide = document.querySelectorAll(".gallery figure:not(.category-" + categoryId + ")");
         const worksToShow = document.querySelectorAll(".category-" + categoryId);
-        console.log(button_name);
-        console.log(worksToHide);
         
         worksToHide.forEach((work) => {
           work.style.display = "none";
@@ -75,7 +73,6 @@ async function genererWorks() {
     const works = await fetchWorks(); //Récupération du retour response.json avec la création d'une variable
 
     works.forEach((work) => {
-      console.log("work", work);
       // Foreach parcourt la liste récupérer dans l'api
       const figure = document.createElement("figure"); // Création d'une variable, qui créer les figure (pour respecter le html)
       const img = document.createElement("img"); // Idem mais pour les image

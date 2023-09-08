@@ -1,7 +1,6 @@
 const url_loggin = "http://localhost:5678/api/users/login";
 
 adminMod()
-
 const form = document.querySelector("form");
 form.addEventListener("submit", function(e) {
 e.preventDefault();
@@ -15,7 +14,8 @@ async function runLogin() {
     const token = await login(email, password);
 
     if (token) {
-        localStorage.setItem('userLoggedIn', 'true');
+        sessionStorage.setItem('token', token);
+        sessionStorage.setItem('userLoggedIn', 'true');
         alert("Connecté");
         window.location.href = '../FrontEnd/index.html'
 
@@ -38,21 +38,20 @@ async function runLogin() {
 }
 
 async function adminMod() {
-  const userLoggedIn = localStorage.getItem('userLoggedIn');
+  const userLoggedIn = sessionStorage.getItem('userLoggedIn');
   if (userLoggedIn === 'true') {
   const login_logout = document.querySelector(".login_logout");
   login_logout.textContent= ("Logout");
   const conteneur_filtre = document.querySelector(".barre-filtre");
   conteneur_filtre.style.visibility = "hidden";
   const modifier_button = document.querySelectorAll(".admin");
-  console.log(modifier_button);
   modifier_button.forEach(button => {
     button.style.display = "flex";
   });
   
   login_logout.addEventListener("click", function(e) {
     e.preventDefault();
-    localStorage.clear();
+    sessionStorage.clear();
     location.reload();
     });
 
@@ -93,4 +92,3 @@ async function login(email, password ) {
       throw error;
   }
 }
-
