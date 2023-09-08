@@ -1,6 +1,6 @@
 const url_loggin = "http://localhost:5678/api/users/login";
 
-adminMod()
+verifierSiUtilisateurConnecterEnAdmin();
 const form = document.querySelector("form");
 form.addEventListener("submit", function(e) {
 e.preventDefault();
@@ -36,8 +36,10 @@ async function runLogin() {
     alert("Échec de la connexion : " + error.message);
 }
 }
-
-async function adminMod() {
+function effacerSessionDeConnexion () {
+  sessionStorage.clear();
+}
+async function verifierSiUtilisateurConnecterEnAdmin() {
   const userLoggedIn = sessionStorage.getItem('userLoggedIn');
   if (userLoggedIn === 'true') {
   const login_logout = document.querySelector(".login_logout");
@@ -51,14 +53,14 @@ async function adminMod() {
   
   login_logout.addEventListener("click", function(e) {
     e.preventDefault();
-    sessionStorage.clear();
+    effacerSessionDeConnexion ();
     location.reload();
     });
 
 } else {  
   // L'utilisateur n'est pas connecté
   console.log('Utilisateur non connecté');
-  localStorage.clear();
+  effacerSessionDeConnexion ();
 }
 }
 
