@@ -4,12 +4,12 @@ const url_endPoint_Categories = "/categories";
 const url_full_Works = `${base_url}${url_endPoint_Works}`;
 const url_full_Categories = `${base_url}${url_endPoint_Categories}`;
 
-const gallery = document.querySelector(".gallery"); // Création de la const gallery pour la selectionné dans le html
+const gallery = document.querySelector(".gallery");
 const conteneur_filtre = document.getElementById("portfolio");
 const barre_filtre = document.querySelector(".barre-filtre");
 
-genererCategories(); // On lance le prog
-genererWorks(); // On lance le prog
+genererCategories(); 
+genererWorks();
 
 async function genererCategories() {
   // Création d'une fonction pour créer nos boutons
@@ -67,7 +67,7 @@ export async function fetchCategories() {
   }
 }
 
-async function genererWorks() {
+export async function genererWorks() {
   // Création d'une fonction pour créer les element
   try {
     const works = await fetchWorks(); //Récupération du retour response.json avec la création d'une variable
@@ -110,7 +110,11 @@ export async function fetchWorks() {
   }
 }
 
-
+export function nettoyageTravaux(){
+  while (gallery.firstChild) {
+    gallery.removeChild(gallery.firstChild);
+}
+}
 
 
 

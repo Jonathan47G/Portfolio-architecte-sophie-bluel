@@ -17,7 +17,7 @@ async function runLogin() {
         sessionStorage.setItem('token', token);
         sessionStorage.setItem('userLoggedIn', 'true');
         alert("Connecté");
-        window.location.href = '../FrontEnd/index.html'
+        window.location.href = 'index.html'
 
     } else {
         alert("Invalide");
