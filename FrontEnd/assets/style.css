@@ -120,7 +120,8 @@ nav a:hover {
 	margin-bottom: 130px;
 }
 #introduction figure {
-	flex: 1
+	flex: 1;
+	order: 1;
 }
 #introduction img {
 	display: block;
@@ -129,7 +130,8 @@ nav a:hover {
 }
 
 #introduction article {
-	flex: 1
+	flex: 1;
+	order: 2;
 }
 #introduction h2 {
 	margin-bottom: 1em;
