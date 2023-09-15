@@ -11,14 +11,14 @@ const boutonFermeture = document.querySelectorAll(".fermeture");
 const modalePage1 = document.querySelector(".page1");
 const modalePage2 = document.querySelector(".page2");
 
-OuvertureDeLaModale();
+ouvertureDeLaModale();
 genererTravauxModale();
 closeModale();
 recuperationCategorie();
-upLoadImage();
+uploadImage();
 envoieDesTravaux();
 
-function OuvertureDeLaModale() {
+function ouvertureDeLaModale() {
   boutonOuverture.addEventListener("click", function () {
     modalePage2.style.display = "none";
     modaleAdmin.style.display = "flex";
@@ -156,7 +156,7 @@ async function recuperationCategorie() {
   });
 }
 
-function upLoadImage() {
+function uploadImage() {
   const uploadButton = document.getElementById("upload-btn");
   const fileInput = document.getElementById("file-input");
   const uploadedImage = document.getElementById("uploaded-image");
@@ -209,7 +209,7 @@ async function envoieDesTravaux() {
           nettoyageTravauxModale();
           genererTravauxModale();
         } else {
-          console.error("Erreur lors de l'envoi des données à l'API");
+          console.error("Modale - Erreur lors de l'envoi des données à l'API");
         }
       } catch (error) {
         console.error("Erreur lors de l'envoi des données à l'API :", error);
@@ -221,9 +221,7 @@ async function envoieDesTravaux() {
 }
 
 function nettoyageTravauxModale() {
-  while (galleryModale.firstChild) {
-    galleryModale.removeChild(galleryModale.firstChild);
-  }
+  galleryModale.innerHTML = ''; 
 }
 
 function gestionnaireInputDesChampFormulaire () {

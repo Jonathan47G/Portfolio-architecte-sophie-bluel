@@ -12,6 +12,7 @@
   genererWorks();
 
   async function genererCategories() {
+    let activeButton = null
     // Création d'une fonction pour créer nos boutons
     const categories = await fetchCategories(); //Récupération du retour response.json avec la création d'une variable
     const bouton_All = document.createElement("button"); // On créer un bouton all
@@ -21,6 +22,9 @@
     conteneur_filtre.appendChild(barre_filtre); // Puis on lie la barre filtre à conteneur
     conteneur_filtre.insertBefore(barre_filtre, conteneur_filtre.children[1]); // On modifie l'odre, pour que la barre s'affiche en 2eme.
     bouton_All.addEventListener("click", function () {
+      if (activeButton) {
+        activeButton.classList.remove('active');
+      }
       // Réinitialise la visibilité de tous les éléments
       const works = document.querySelectorAll(".gallery figure");
       works.forEach((work) => {
@@ -39,7 +43,15 @@
           const categoryId = category.id;
           const worksToHide = document.querySelectorAll(".gallery figure:not(.category-" + categoryId + ")");
           const worksToShow = document.querySelectorAll(".category-" + categoryId);
-          
+
+          // Changement couleur bouton
+          if (activeButton) {
+            activeButton.classList.remove('active');
+          }
+          button_name.classList.add('active');
+          activeButton = button_name;
+          //********************************/
+
           worksToHide.forEach((work) => {
             work.style.display = "none";
           });
