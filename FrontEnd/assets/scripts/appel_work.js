@@ -12,7 +12,7 @@
   genererWorks();
 
   async function genererCategories() {
-    let activeButton = null
+    let activeButton = null;
     // Création d'une fonction pour créer nos boutons
     const categories = await fetchCategories(); //Récupération du retour response.json avec la création d'une variable
     const bouton_All = document.createElement("button"); // On créer un bouton all
@@ -25,6 +25,9 @@
       if (activeButton) {
         activeButton.classList.remove('active');
       }
+      bouton_All.classList.add('active');
+          activeButton = bouton_All;
+
       // Réinitialise la visibilité de tous les éléments
       const works = document.querySelectorAll(".gallery figure");
       works.forEach((work) => {
