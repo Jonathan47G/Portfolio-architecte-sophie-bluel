@@ -33,8 +33,9 @@
       works.forEach((work) => {
         work.style.display = "block"; // Affiche tous les éléments
       });
+      
     });
-    
+    bouton_All.click();
     try {
       categories.forEach((category) => {
         // Foreach parcourt la liste récupérer dans l'api
